@@ -10,7 +10,7 @@ Shell Scripts to learn and automate task
 
 ## What is shebang in Linux shell scripting ?
 
-- #!/bin/bash 
+> #!/bin/bash
 - This #! is called shebang or hashbang. The shebang plays an important role in shell scripting, specially while dealing with different types of shell.
 - The shebang is the combination of the # (pound key) and ! (exclamation mark). This character combination has a special meaning when it's used in the very first line of the script. It is used to specify the interpreter with wich the given script will be runed by default.
-- So, if the first line of a script is: ~!/bin/bash. It means the interpreter should be bash shell.
+- So, if the first line of a script is: ````#!/bin/bash```. It means the interpreter should be bash shell.
