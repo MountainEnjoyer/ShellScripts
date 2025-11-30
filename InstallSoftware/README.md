@@ -11,12 +11,23 @@
  - What is if-else in shell scripting ?
    - In Shell scripting, the if-else statement is used to make decisions based on the values of vaiables or the results of commands. The basic syntax of an if-else statement is as follows: 
   ```
-  if [condition]; then
+  if [ condition ]; then
    commands
   else
     commands
   fi
 ```
 
+  - It's also possible to use elif (else if) statement wich allows you to chain several conditions together. The syntax for using elif is:
+  ```
+  if [ condition 1 ]; then 
+    commands
+  elif [ condition 2 ]; then
+    commands
+  else 
+    commands
+  fi
+```
 
-   ```
+```
+```
