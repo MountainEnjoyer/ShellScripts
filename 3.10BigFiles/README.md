@@ -21,9 +21,12 @@
   - Let's say I am running the script as:
   ```./commandlinearguments.sh devops techstack learning```
 
+```
   $0: script name
   $1: First parameter 
   $@: Complete list of arguments
   $#: total number of parameters
   $$: Process id of the script
   $?: Exit code for the script
+```
+```
