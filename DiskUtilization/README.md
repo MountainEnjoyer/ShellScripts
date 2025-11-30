@@ -33,3 +33,17 @@
   By default tail command reads last 10 lines from a file
   ```tail -n filename```
   This option displays the last n number of lines of the document.
+
+## Awk command
+  - The awk command is a powerful method for processing or analyzing text or data files, wich are organized by lines (rows or records) and columns (fields).
+  - We can use awk as a linux command and also as a scripting language like bash shell scripting.
+  - Simple awk command syntax:
+    ```awk [options] '[selection_criteria] {action}' imput_file
+    cat input_file | awk [options] '[selection_criteria] {action}' imput_file
+      ```
+    Awk can take the following options:
+    -F fs         To specify a field separator. (Default sperator is tab and space)
+    -f file       To Specify a file that contains awk script.
+    -v var=value  To declare a vaiable.
+- Selection Criteria: pattern/condition
+- Action: It's a logic to perform action on each row/record.
