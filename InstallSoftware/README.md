@@ -9,4 +9,13 @@
   5. Using special variables: Shell scripting also support special variables such as ```$0``` wich refers to the name of the script, ```$1```, ```$2```, ```$3```, etc.. wich refers to the first, second, third etc... command-line arguments passed to the script and ```$#```, wich gives the number of command-line arguments passed to the script.
 
  - What is if-else in shell scripting ?
- 
+   - In Shell scripting, the if-else statement is used to make decisions based on the values of vaiables or the results of commands. The basic syntax of an if-else statement is as follows: 
+   ```if [condition]; then
+   commands
+  else
+    commands
+  fi
+```
+```
+
+   ```
