@@ -1,0 +1,4 @@
+8.0K	.
+4.0K	./README.md
+4.0K	./10BigFiles.sh
+0	./filesize.txt
