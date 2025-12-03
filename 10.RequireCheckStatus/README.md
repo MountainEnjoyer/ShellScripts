@@ -11,6 +11,15 @@
 | -N number | Returns after reading the specified number of chars, ignoring the delimiter. |
 | -p prompt | Outputs the prompt string before reading user input |
 | -r | Disables backslashes to escape characters |
+| -s | does not show the user input |
 | -t time | The command times out after specified time in seconds |
 | -u file_descriptor | Read from file descriptor instead of standart output |
+
+## While loop syntax to read a file
+```
+while read -r line;
+do
+  echo "$line";
+done < input.file
+```
 
