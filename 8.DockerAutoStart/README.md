@@ -21,4 +21,4 @@
     ```
     ```
     ```crontab -e```
-  - Note: If the job requires the psswd, switch user as root and creat a cron job but don't switch back. And for Arch cron doesn't exist but cronie is an alternative, you just have to start it first with systemctl
+  - Note: If the job requires the psswd, switch user as root and create a cron job. And for Arch cron doesn't exist but cronie is an alternative, you just have to start it first with systemctl
