@@ -28,4 +28,4 @@ for variable in list
   | $# | Total number of arguments and its a good approach for loop concepts |
   | $* | In order to get all arguments as double-quoted, we can follow this way |
   | $$ | To know about the process id of the current shell |
-  | $\? and $\! | Exit status id and process id of the last command |
+  | $ ? and $ ! | Exit status id and process id of the last command |
