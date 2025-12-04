@@ -14,8 +14,7 @@ modif=`git status | grep modified | cut -d ":" -f 2 | cut -d ' ' -f 4`
 echo "Modified Files:"
 echo $modif
 git add $modif
-clear
 git status
-comm=`read -p "Commit: "`
+read -p "Commit: " comm
 git commit -m " $comm "
 git push
