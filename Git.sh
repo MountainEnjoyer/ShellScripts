@@ -4,9 +4,18 @@
 #git reset --hard head~1 pareil mais en perdant le travail
 
 clear
-git add *
+
+toilet "Git Script"
+echo "        Made by Zakary Chauve."
+sleep 1
+clear
+modif=`git status | grep modified | cut -d ":" -f 2 | cut -d ' ' -f 4`
+
+echo "Modified Files:"
+echo $modif
+git add $modif
 clear
 git status
-sleep 2
-git commit -m "$1"
+comm=`read -p "Commit:"`
+git commit -m $comm
 git push

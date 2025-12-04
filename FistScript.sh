@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "this is the first shell script"
+echo "this is the first shell script."
 
 clear 
 date
