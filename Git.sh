@@ -16,6 +16,6 @@ echo $modif
 git add $modif
 clear
 git status
-comm=`read -p "Commit:"`
-git commit -m "$comm"
+comm=`read -p "Commit: "`
+git commit -m " $comm "
 git push
