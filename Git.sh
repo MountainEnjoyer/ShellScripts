@@ -18,3 +18,12 @@ git status
 read -p "Commit: " comm
 git commit -m " $comm "
 git push
+verif=$?
+clear
+if [ verif -eq 0 ]
+then
+  echo "Push successful."
+else
+  echo "Something went wrong..."
+  git status
+fi
