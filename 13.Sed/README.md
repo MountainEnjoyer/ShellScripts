@@ -21,3 +21,8 @@
   - sed -I '2,10d' filename (delete in orginal file itself)
   - sed -i.back '2,10d' filename (will take backup before delete)
 
+## Find and replace with Sed
+  - sed 's/root/architect' filename (substitute root with architect 1st word occurence with new word)
+  - sed 's/root/architect/g' filename (substitute root with architect globally in whole file)
+  - sed -i.back 's/root/architect/g' filename (changed orginal file itself)
+  - sed '/search/s/old/new/g' filename (replaces the old world with new word if that new line consists of search word)
