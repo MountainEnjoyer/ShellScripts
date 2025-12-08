@@ -26,3 +26,9 @@
   - sed 's/root/architect/g' filename (substitute root with architect globally in whole file)
   - sed -i.back 's/root/architect/g' filename (changed orginal file itself)
   - sed '/search/s/old/new/g' filename (replaces the old world with new word if that new line consists of search word)
+
+## Insertion and deletion with sed
+  - insert a new line (sed 'line_numberi' filename)
+  - sed -l (1i s_no name) filename
+  - sed -l '1a --------' filename
+  - I and a (insert before and insert after)
