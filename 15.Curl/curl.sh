@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="https://zakary.xyz"
+URL=$1
 echo "%{http_code}"
 response=$(curl -s -w "%{http_code}" $URL)
 http1_code=$(tail -n1 <<< "$response")
