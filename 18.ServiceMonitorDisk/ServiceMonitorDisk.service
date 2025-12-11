@@ -1,0 +1,18 @@
+[UNIT]
+Description=FS Monitor Service
+Documentation=https://zakary.xyz
+
+[SERVICE]
+Type=simple
+User=root
+Group=root
+TimeoutStartSec=0
+Restart=on-failure
+RestartSec=30s
+#ExecStartPre=
+ExecStart=/home/architect/Documents/ShellScripts/18.ServiceMonitorDisk/ServiceMonitorDisk.sh
+SysLogIdentifier=DiskUtilization
+#ExecStop=
+
+[Install]
+WantedBy=multi-user.target
