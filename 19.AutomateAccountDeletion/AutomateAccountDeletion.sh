@@ -46,6 +46,30 @@ function get_answer {
 }
 
 function process_answer {
+  answer=$(echo $answer | cut -c1)
 
+  case $answer in
+    y|Y)
+      ;;
+    *)
+      echo
+      echo $exit_line1
+      echo $exit_line2
+      echo
+      exit
+      ;;
+    esac
+
+    unset exit_line1
+    unset exit_line2
 }
 
+echo "Step #1 - Determine User Account name to delete"
+echo
+line1="Please enter the username of the user"
+line2="account you wish to delete from system: "
+get_answer
+user_account=$answer
+
+line1="Is $user_account the user account"
+line2="you wish to delete from the system ? [y/n]"
