@@ -81,7 +81,7 @@ process_answer
 
 user_account_record=$(cat /etc/passwd | grep -w $user_account)
 
-if [ $? -eq 1]
+if [ $? -eq 1 ]
 then
   echo
   echo "Account, $user_account not found."
@@ -152,7 +152,7 @@ echo
 echo "Please wait. This may take a while..."
 
 report_date=$(date +%y%m%d)
-report_file="$user_account"_Files_"report_date".rpt
+report_file="$user_account"_Files_"$report_date".rpt
 
 find / -user $user_account> $report_file 2>/dev/null
 
