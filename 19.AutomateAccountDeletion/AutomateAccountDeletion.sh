@@ -158,8 +158,22 @@ find / -user $user_account> $report_file 2>/dev/null
 
 echo
 echo "Report is complete."
-echo "Name of report: $report_file"
+echo "Name of report:   $report_file"
 echo -n "Location of report: "; pwd 
 echo
 
+echo
+echo "Step #4 - Remove user account"
+echo
 
+line1="Do you wish to remove $user_account's account from system? [y/n]"
+get_answer
+
+exit_line1="Since you do not wish to remove the user account,"
+exit_line2="$user_account at the time, exiting the script..."
+process_answer
+
+userdel $user_account
+echo
+echo "The user account, $user_account has been removed."
+echo
