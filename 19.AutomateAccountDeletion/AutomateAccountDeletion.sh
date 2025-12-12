@@ -98,4 +98,47 @@ echo
 line1="Is this the correct User Account ? [y/n]"
 get_answer
 
+echo 
+echo "Step #2 - Find process on system belonging to user account"
+echo
+
+ps - $user_account> /dev/null
+
+case $? in 
+  1)
+    echo "There are no processes for this account currently running."
+    echo
+    ;;
+  0)
+    echo "$user_account has the following process(es) running:"
+    ps -u $user_account
+
+    line1="Would you like me to kill the process(es) ? [y/n]"
+    get_answer
+    
+    answer=$(echo $answer | cut -c1)
+
+    case $answer in 
+      y|Y)
+        echo 
+        echo "Killing off process(es)..."
+        command_1="ps -u $user_account --no-heading"
+
+        command_3="xargs -d \\n /usr/bin/sudo /bin/kill -9"
+
+        $command_1 | grep '{print $1}' | $command_3
+
+        echo 
+        echo "Process(es) killed."
+        ;;
+      *)
+        echo
+        echo "Will not kill process(es)."
+        ;;
+    esac
+    ;;
+esac
+
+
+
 
