@@ -73,3 +73,29 @@ user_account=$answer
 
 line1="Is $user_account the user account"
 line2="you wish to delete from the system ? [y/n]"
+get_answer
+
+exit_line1="Because the account, $user_account, is not "
+exit_line2="the one you wish to delete, we are leaving the script..."
+process_answer
+
+user_account_record=$(cat /etc/passwd | grep -w $user_account)
+
+if [ $? -eq 1]
+then
+  echo
+  echo "Account, $user_account not found."
+  echo "leaving the script..."
+  echo
+  exit
+fi
+
+echo 
+echo "I found this record:"
+echo $user_account_record
+echo
+
+line1="Is this the correct User Account ? [y/n]"
+get_answer
+
+
