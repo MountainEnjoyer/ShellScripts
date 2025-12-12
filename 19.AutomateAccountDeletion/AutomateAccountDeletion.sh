@@ -102,7 +102,7 @@ echo
 echo "Step #2 - Find process on system belonging to user account"
 echo
 
-ps - $user_account> /dev/null
+ps -u $user_account> /dev/null
 
 case $? in 
   1)
@@ -139,6 +139,27 @@ case $? in
     ;;
 esac
 
+echo
+echo "Step #3 - Find files on system belonging to user account"
+echo
+echo "Creating a report of all files owned by $user_account."
+echo
+echo "It is recommended that you backup/archive these files,"
+echo "and then do one of two things:"
+echo "  1) Delete the files"
+echo "  2) Change the files ownership to current user account."
+echo
+echo "Please wait. This may take a while..."
 
+report_date=$(date +%y%m%d)
+report_file="$user_account"_Files_"report_date".rpt
+
+find / -user $user_account> $report_file 2>/dev/null
+
+echo
+echo "Report is complete."
+echo "Name of report: $report_file"
+echo -n "Location of report: "; pwd 
+echo
 
 
