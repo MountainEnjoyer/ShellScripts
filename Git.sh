@@ -31,4 +31,3 @@ else
   echo "Something went wrong..."
   git status
 fi
-
