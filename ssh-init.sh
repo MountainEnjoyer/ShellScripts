@@ -7,13 +7,13 @@ read -p "? : " choix
 
 case $choix in
 [0])
-  ssh-add /home/Ben/.ssh/Github
+  ssh-add /home/$USER/.ssh/Github
   ;;
 [1])
-  ssh-add /home/Ben/.ssh/home-server-keys
+  ssh-add /home/$USER/.ssh/home-server-keys
   ;;
 *)
-  ssh-add /home/Ben/.ssh/home-server-keys
-  ssh-add /home/Ben/.ssh/Github
+  ssh-add /home/$USER/.ssh/home-server-keys
+  ssh-add /home/$USER/.ssh/Github
   ;;
 esac
